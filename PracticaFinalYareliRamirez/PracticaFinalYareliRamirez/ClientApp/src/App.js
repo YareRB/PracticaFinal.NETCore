@@ -6,6 +6,8 @@ import ModalTarea from "./components/ModalTarea"
 const App = () => {
 
     const [tareas, setTareas] = useState([])
+    const [mostrarModal, setMostrarModal] = useState(false)
+    const [editar, setEditar] = useState(null)
 
     const mostrarTareas = async () => {
 

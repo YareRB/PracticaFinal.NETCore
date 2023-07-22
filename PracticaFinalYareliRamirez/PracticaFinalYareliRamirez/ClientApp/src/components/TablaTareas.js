@@ -14,7 +14,7 @@ const TablaTareas = ({ data, setEditar, mostrarModal, setMostrarModal, eliminarT
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Descripcion</th>
-                    <th>Completado</th>
+                    <th>Estatus</th>
                     <th></th>
                 </tr>
             </thead>
@@ -30,7 +30,7 @@ const TablaTareas = ({ data, setEditar, mostrarModal, setMostrarModal, eliminarT
                                 <td>{item.id}</td>
                                 <td>{item.nombre}</td>
                                 <td>{item.descripcion}</td>
-                                <td>{item.completado ? "sip" : "nope"}</td>
+                                <td>{item.completado ? "Completado" : "Sin realizar"}</td>
                                 <td>
                                     <Button color="primary" size="sm" className="me-2" onClick={() => enviarDatos(item)}>Editar</Button>
                                     <Button color="danger" size="sm" onClick={() => eliminarTarea(item.id)}>Eliminar</Button>
