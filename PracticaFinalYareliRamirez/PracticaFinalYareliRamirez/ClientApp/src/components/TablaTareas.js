@@ -1,4 +1,7 @@
 ﻿import { Button, Table } from "reactstrap"
+import "../style/style.css"
+import basura from "../assets/basura.png"
+import editar from "../assets/editar.png"
 
 const TablaTareas = ({ data, setEditar, mostrarModal, setMostrarModal, eliminarTarea }) => {
 
@@ -8,8 +11,8 @@ const TablaTareas = ({ data, setEditar, mostrarModal, setMostrarModal, eliminarT
     }
 
     return (
-        <Table striped responsive>
-            <thead>
+        <Table responsive>
+            <thead className="fondo-titulo">
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
@@ -30,10 +33,10 @@ const TablaTareas = ({ data, setEditar, mostrarModal, setMostrarModal, eliminarT
                                 <td>{item.id}</td>
                                 <td>{item.nombre}</td>
                                 <td>{item.descripcion}</td>
-                                <td>{item.completado ? "Completado" : "Sin realizar"}</td>
+                                <td ><div className={item.completado ? "completado" : "no-completado"}>{item.completado ? "Completado" : "Sin realizar"}</div></td>
                                 <td>
-                                    <Button color="primary" size="sm" className="me-2" onClick={() => enviarDatos(item)}>Editar</Button>
-                                    <Button color="danger" size="sm" onClick={() => eliminarTarea(item.id)}>Eliminar</Button>
+                                    <Button outline color="black" size="sm" className="me-2" onClick={() => enviarDatos(item)}><img className="btn-editar" src={editar} alt="Editar"></img></Button>
+                                    <Button outline color="black" size="sm" onClick={() => eliminarTarea(item.id)}><img className="btn-eliminar" src={basura} alt="Eliminar"></img></Button>
                                 </td>
                             </tr>
                         ))

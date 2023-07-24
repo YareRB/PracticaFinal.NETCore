@@ -33,6 +33,8 @@ const ModalTarea = ({ mostrarModal, setMostrarModal, guardarTarea, editar, setEd
 
         if (tarea.id == 0) {
             guardarTarea(tarea)
+
+            setTarea(modeloTarea)
         } else {
             editarTarea(tarea)
         }
@@ -83,8 +85,8 @@ const ModalTarea = ({ mostrarModal, setMostrarModal, guardarTarea, editar, setEd
                 </Form>
             </ModalBody>
             <ModalFooter>
-                <Button color="primary" size="sm" onClick={enviarDatos}>Guardar</Button>
-                <Button color="danger" size="sm" onClick={cerrarModal}>Cerrar</Button>
+                <Button color="primary" outline size="sm" onClick={enviarDatos}>Guardar</Button>
+                <Button color="secondary" outline size="sm" onClick={cerrarModal}>Cerrar</Button>
             </ModalFooter>
         </Modal>
     )

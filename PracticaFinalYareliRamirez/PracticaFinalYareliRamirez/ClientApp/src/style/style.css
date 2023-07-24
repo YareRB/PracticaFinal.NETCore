@@ -1,0 +1,35 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.fondo-titulo {
+    background-color: #9FB0A0;
+    color: white;
+}
+
+.btn-eliminar{
+    width: 30px;
+    height: 30px
+}
+
+.btn-editar {
+    width: 25px;
+    height: 25px
+}
+
+.completado {
+    background-color: #CDFAD1 !important;
+    color: #56A15F;
+    border-radius: 10px;
+    width: 60%;
+    padding-left: 15px
+}
+.no-completado {
+    background-color: #F7EACD !important;
+    color: #E3C155;
+    border-radius: 10px;
+    width: 60%;
+    padding-left: 15px
+}

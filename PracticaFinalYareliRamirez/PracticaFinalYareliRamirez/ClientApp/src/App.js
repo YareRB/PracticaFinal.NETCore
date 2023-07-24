@@ -85,10 +85,17 @@ const App = () => {
                 <Col sm="12">
                     <Card>
                         <CardHeader>
-                            <h5>Tareas</h5>
+                            <Row>
+                                <Col sm="10" className="text-center">
+                                    <h5>Tareas</h5>
+                                </Col>
+                                <Col sm="2">
+                                    <Button size="sm" color="secondary" outline onClick={() => setMostrarModal(!mostrarModal)}>Agregar Tarea</Button>
+                                </Col>
+                            </Row>
                         </CardHeader>
                         <CardBody>
-                            <Button size="sm" color="success" onClick={() => setMostrarModal(!mostrarModal)}>Agregar Tarea</Button>
+                            
                             <hr></hr>
                             <TablaTareas data={tareas}
                                 setEditar={setEditar}
